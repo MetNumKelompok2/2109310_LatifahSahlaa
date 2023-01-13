@@ -1,7 +1,7 @@
-import numpy as np
-import sys
+import numpy as np  #library untuk proses komputasi numerik
+import sys   #library standard
 
-n = int(input('Input jumlah variabel: '))
+n = int(input('Masukkan Jumlah Variabel: ')) 
 a = np.zeros((n,n+1))
 x = np.zeros(n)
 
@@ -28,6 +28,6 @@ for i in range(n-2,-1,-1):
     for j in range(i+1,n):
         x[i] = x[i] - a[i][j]*x[j]       
         
-print('\nSolusi SPL adalah: ')
+print('\nSOLUSI SPL: ')
 for i in range(n):
     print('X%d = %0.2f' %(i,x[i]), end = '\t')
